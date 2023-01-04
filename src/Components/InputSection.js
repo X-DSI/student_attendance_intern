@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "./Button";
 
 const InputSection = () => {
@@ -7,18 +7,12 @@ const InputSection = () => {
   const [rollNumber, setRollNumber] = useState("");
   const [studentName, setStudentName] = useState("");
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    setRollNumber("");
-    setStudentName("");
-  };
-
   // Check-In Function
   const onCheckIn = async (rollNumber, studentName) => {
     const res = await fetch(`http://localhost:5000/students/${rollNumber}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ checkintime: "changfe", name }),
+      body: JSON.stringify({ checkintime: "cfsjdhfgjhge", name }),
     });
     const data = await res.json();
     console.log("🚀 ~ file: InputSection.js:16 ~ onCheckIn ~ data", data);
@@ -27,15 +21,14 @@ const InputSection = () => {
   // Check-Out Function
   const onCheckOut = () => {};
   return (
-    <div className="inputsection-wrapper">
-      <form className="input-form" onSubmit={onSubmit}>
+    <div className="inputsection-wrapper container">
+      <form className="input-form">
         <div className="form-field">
           <label>Roll Number</label>
           <input
             type="text"
             placeholder="Roll Number"
-            value={rollNumber}
-            onChange={(e) => setRollNumber(e.target.value)}
+            defaultValue={rollNumber}
           />
         </div>
         <div className="form-field">
@@ -43,17 +36,18 @@ const InputSection = () => {
           <input
             type="text"
             placeholder="Student Name"
-            value={studentName}
-            onChange={(e) => setStudentName(e.target.value)}
+            defaultValue={studentName}
           />
         </div>
       </form>
-      <Button
-        color={"green"}
-        onClick={onCheckIn(rollNumber, studentName)}
-        text={"Check In"}
-      />
-      <Button color={"red"} onClick={onCheckOut} text={"Check Out"} />
+      <div className="btn-wrapper">
+        <Button
+          color={"green"}
+          onClick={onCheckIn(rollNumber, studentName)}
+          text={"Check In"}
+        />
+        <Button color={"red"} onClick={onCheckOut} text={"Check Out"} />
+      </div>
     </div>
   );
 };
