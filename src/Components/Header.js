@@ -2,7 +2,7 @@ const Header = () => {
   return (
     <>
       <header className="App-header">
-        <h1>Student's Attendance System</h1>
+        <h1>Student Attendance System</h1>
       </header>
     </>
   );

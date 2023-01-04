@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <p>Internship Assignment</p>
+      <p>Internship Assignment from Internshala</p>
     </footer>
   );
 };
