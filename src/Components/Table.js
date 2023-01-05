@@ -3,24 +3,46 @@ const Table = () => {
     <div>
       <table>
         <tr>
+          <th>Roll Number</th>
           <th>Name</th>
-          <th>Age</th>
-          <th>Gender</th>
+          <th>Check-In Time</th>
+          <th>Check-Out Time</th>
         </tr>
         <tr>
-          <td>Anom</td>
-          <td>19</td>
-          <td>Male</td>
+          <td>1</td>
+          <td>Daniel</td>
+          <td>10 am</td>
+          <td>12 pm</td>
         </tr>
         <tr>
-          <td>Megha</td>
-          <td>19</td>
-          <td>Female</td>
+          <td>1</td>
+          <td>Daniel</td>
+          <td>10 am</td>
+          <td>12 pm</td>
         </tr>
         <tr>
-          <td>Subham</td>
-          <td>25</td>
-          <td>Male</td>
+          <td>1</td>
+          <td>Daniel</td>
+          <td>10 am</td>
+          <td>12 pm</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Daniel</td>
+          <td>10 am</td>
+          <td>12 pm</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Daniel</td>
+          <td>10 am</td>
+          <td>12 pm</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Daniel</td>
+          <td>10 am</td>
+          <td>12 pm</td>
         </tr>
       </table>
     </div>
