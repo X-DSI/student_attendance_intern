@@ -1,17 +1,17 @@
 {
   "students": [
     {
-      "checkintime": "cxcvbe",
+      "checkInTime": "cxcvbe",
       "name": "Daniel",
       "id": 1
     },
     {
-      "checkintime": "cxcvbe",
+      "checkInTime": "cxcvbe",
       "name": "Syles",
       "id": 2
     },
     {
-      "checkintime": "cxcvbe",
+      "checkInTime": "cxcvbe",
       "name": "Immanuel",
       "id": 3
     },

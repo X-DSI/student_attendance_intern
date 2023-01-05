@@ -1,8 +1,10 @@
-const Table = () => {
+const Table = ({ data }) => {
   const getData = async () => {
     const res = await fetch("http://localhost:5000/students");
     const data = await res.json();
-    console.log("🚀 ~ file: Table.js:5 ~ getData ~ data", data);
+    const newData = data.map((data) => {
+      console.log("🚀 ~ file: Table.js:7 ~ newData ~ data", data.id);
+    });
     return data;
   };
 
@@ -15,42 +17,14 @@ const Table = () => {
           <th>Check-In Time</th>
           <th>Check-Out Time</th>
         </tr>
-        <tr>
-          <td>55</td>
-          <td>Daniel</td>
-          <td>10 am</td>
-          <td>12 pm</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Daniel</td>
-          <td>10 am</td>
-          <td>12 pm</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Daniel</td>
-          <td>10 am</td>
-          <td>12 pm</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Daniel</td>
-          <td>10 am</td>
-          <td>12 pm</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Daniel</td>
-          <td>10 am</td>
-          <td>12 pm</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Daniel</td>
-          <td>10 am</td>
-          <td>12 pm</td>
-        </tr>
+        {data.map((student) => (
+          <tr key={student.id}>
+            <td>{student.id}</td>
+            <td>{student.name}</td>
+            <td>{student.checkInTime ? student.checkInTime : "-"}</td>
+            <td>{student.checkOutTime ? student.checkOutTime : "-"}</td>
+          </tr>
+        ))}
       </table>
       <button onClick={getData}>Click me</button>
       <p></p>
