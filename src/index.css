@@ -14,10 +14,10 @@ body {
 }
 
 .container {
-  max-width: 500px;
-  margin: 30px auto;
+  max-width: auto;
+  margin: 10% auto;
   overflow: auto;
-  min-height: 300px;
+  min-height: auto;
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
@@ -134,4 +134,14 @@ footer {
 .no-underline {
   text-decoration: none;
   color: grey;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    text-align: center;
+  }
+
+  .main-wrapper {
+    flex-direction: column;
+  }
 }

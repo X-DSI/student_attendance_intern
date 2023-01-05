@@ -1,3 +1,6 @@
+import Button from "./Button";
+import { onCheckIn } from "./InputSection";
+
 const Table = ({ data }) => {
   const getData = async () => {
     const res = await fetch("http://localhost:5000/students");
@@ -26,8 +29,6 @@ const Table = ({ data }) => {
           </tr>
         ))}
       </table>
-      <button onClick={getData}>Click me</button>
-      <p></p>
     </div>
   );
 };

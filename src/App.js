@@ -3,10 +3,9 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import InputSection from "./Components/InputSection";
 import Table from "./Components/Table";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const totalStudents = 10;
   const [data, setData] = useState([
     {
       name: "Daniel",
@@ -16,7 +15,21 @@ function App() {
       name: "Syles",
       id: 2,
     },
+    {
+      name: "Immanuel",
+      id: 3,
+    },
+    {
+      name: "Mark",
+      id: 4,
+    },
   ]);
+  let totalStudents = data.length;
+  console.log("🚀 ~ file: App.js:20 ~ App ~ totalStudents", totalStudents);
+
+  useEffect(() => {
+    totalStudents = totalStudents + 1;
+  }, [data]);
 
   return (
     <div className="App total-wrapper">
