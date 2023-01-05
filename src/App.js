@@ -24,12 +24,9 @@ function App() {
       id: 4,
     },
   ]);
-  let totalStudents = data.length;
-  console.log("🚀 ~ file: App.js:20 ~ App ~ totalStudents", totalStudents);
 
-  useEffect(() => {
-    totalStudents = totalStudents + 1;
-  }, [data]);
+  let totalStudents = data.length;
+  useEffect(() => {}, []);
 
   return (
     <div className="App total-wrapper">

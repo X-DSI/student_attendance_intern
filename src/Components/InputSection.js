@@ -33,7 +33,7 @@ const InputSection = ({ data, setData }) => {
         return data;
       });
     } else {
-      alert("Student Not in Data");
+      alert("Student Not in Records");
     }
   };
 
@@ -43,18 +43,14 @@ const InputSection = ({ data, setData }) => {
       (student) => student.id === parseInt(studentData.id)
     );
 
-    const isStudentCheckedIn = data.find((student) => student.checkInTime);
-
     if (isStudentPresent) {
       setData((prev) => {
         const data = prev.map((student) => {
-          if (student.id === parseInt(studentData.id && isStudentCheckedIn)) {
+          if (student.id === parseInt(studentData.id)) {
             return {
               ...student,
               checkOutTime: new Date().toLocaleTimeString(),
             };
-          } else {
-            alert("Student hasn't Checked-In yet");
           }
           return student;
         });

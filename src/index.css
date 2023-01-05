@@ -47,14 +47,14 @@ body {
 }
 
 .left-wrapper {
-  margin-right: -12%;
+  margin-right: -8%;
 }
 
 .right-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-left: -12%;
+  margin-left: -8%;
 }
 
 .content-wrapper {
