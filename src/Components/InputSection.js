@@ -12,7 +12,10 @@ const InputSection = () => {
     const res = await fetch(`http://localhost:5000/students/${rollNumber}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ checkintime: "cfsjdhfgjhge", name }),
+      body: JSON.stringify({
+        checkintime: "cfsjdhfgjhge",
+        name: { studentName },
+      }),
     });
     const data = await res.json();
     console.log("🚀 ~ file: InputSection.js:16 ~ onCheckIn ~ data", data);
