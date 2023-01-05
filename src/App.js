@@ -23,10 +23,20 @@ function App() {
       name: "Mark",
       id: 4,
     },
+    {
+      name: "Kumar",
+      id: 5,
+    },
   ]);
 
+  const [studentsCheckedIn, setStudentsCheckedIn] = useState(0);
+
   let totalStudents = data.length;
-  useEffect(() => {}, []);
+
+  useEffect(() => {
+    const studentsCheckedIn = data.filter((student) => student.checkInTime);
+    setStudentsCheckedIn(studentsCheckedIn.length);
+  }, [data]);
 
   return (
     <div className="App total-wrapper">
@@ -39,7 +49,8 @@ function App() {
         <div className="right-wrapper">
           <Table data={data} />
           <p className="content-wrapper">
-            Total Number of students in the school right now: {totalStudents}
+            Total Number of students in the school right now:{" "}
+            {studentsCheckedIn}
           </p>
         </div>
       </div>

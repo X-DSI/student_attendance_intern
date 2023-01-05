@@ -2,15 +2,6 @@ import Button from "./Button";
 import { onCheckIn } from "./InputSection";
 
 const Table = ({ data }) => {
-  const getData = async () => {
-    const res = await fetch("http://localhost:5000/students");
-    const data = await res.json();
-    const newData = data.map((data) => {
-      console.log("🚀 ~ file: Table.js:7 ~ newData ~ data", data.id);
-    });
-    return data;
-  };
-
   return (
     <div>
       <table>

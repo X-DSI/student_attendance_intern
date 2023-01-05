@@ -43,6 +43,19 @@ const InputSection = ({ data, setData }) => {
       (student) => student.id === parseInt(studentData.id)
     );
 
+    let isStudentCheckedIn = false;
+
+    data.forEach((element) => {
+      if (element.id === parseInt(studentData.id)) {
+        isStudentCheckedIn = Boolean(element.checkInTime);
+      }
+    });
+
+    if (!isStudentCheckedIn) {
+      alert("Student Not Checked In");
+      return;
+    }
+
     if (isStudentPresent) {
       setData((prev) => {
         const data = prev.map((student) => {
