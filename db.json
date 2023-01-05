@@ -14,6 +14,22 @@
       "checkintime": "cxcvbe",
       "name": "Immanuel",
       "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Jerome"
+    },
+    {
+      "id": 5,
+      "name": "Kumar"
+    },
+    {
+      "id": 6,
+      "name": "Steve"
+    },
+    {
+      "id": 7,
+      "name": "Marshall"
     }
   ]
 }
